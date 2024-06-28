@@ -65,11 +65,15 @@ The app is deployed on port 80 so that it can be accessed without any redirectio
 
 2. Update the permissions on the key to allow SSH connect.
 
-` chmod 400 <path to your pem file>`
+```
+chmod 400 <path to your pem file>
+```
 
 3. SSH into the cluster by using the following command.
 
-` ssh -i <path to your pem file> root@<Floating IP>`
+```
+ssh -i <path to your pem file> root@<Floating IP>
+```
 
 4. Enter Yes when asked to add the key to known hosts.
 
@@ -80,5 +84,46 @@ The app is deployed on port 80 so that it can be accessed without any redirectio
 
 There is a quick script to install all of the necessary libraries and tools for you as well as a Flask application to give you access to the model over a UI or API. Let’s see how to get it.
 
-1. 
+1. Get the required scripts
+
+```
+git clone https://github.com/rachvis/govern-3rd-party-models 
+```
+
+2. cd into the script.
+
+```
+cd govern-3rd-party-models
+```
+
+```
+cd VPC VSI Script
+```
+
+3. Set up file permissions
+
+```
+ chmod +x install.sh
+```
+
+4. Run the setup files
+
+```
+ ./install.sh
+```
+
+5. Wait for the setup process to complete. It can take a few minutes. After you see the following screen, you are all set.
+
+Note: If you are asked for manual input, especially during the update-initramfs step, press enter until you see the console again. The process will then continue.
+
+<img src="images/lab 1/script on vsi.png">
+
+### Step 5: Check the endpoint
+---
+
+1. Once the script is completed, the flask application is running in your VM. 
+
+<img src="images/lab 1/script completion.png">
+
+Congratulations, you have successfully deployed a LLM on a VSI instance!!
 
