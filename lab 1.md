@@ -125,5 +125,5 @@ Note: If you are asked for manual input, especially during the update-initramfs 
 
 <img src="images/lab 1/script completion.png">
 
-Congratulations, you have successfully deployed a LLM on a VSI instance!!
+### Congratulations, you have successfully deployed a LLM on a VSI instance!!
 
